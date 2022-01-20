@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './epics/App/';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider, Global, css } from '@emotion/react';
+import resets from './assets';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider theme={'undefined'}>
     <App />
-  </React.StrictMode>,
+    <Global styles={resets || css``} />
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
