@@ -4,9 +4,10 @@ import App from './epics/App/';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, Global, css } from '@emotion/react';
 import resets from './assets';
+import theme from './theme';
 
 ReactDOM.render(
-  <ThemeProvider theme={'undefined'}>
+  <ThemeProvider theme={theme}>
     <App />
     <Global styles={resets || css``} />
   </ThemeProvider>,
