@@ -2,6 +2,8 @@ import React from 'react';
 import { useTheme } from '@emotion/react';
 import { TSize } from '../../definitions/TElementProps';
 import { CWrap } from './App.styles';
+import Main from '../Main';
+import Header from '../../features/Header';
 
 export interface IProps {
   sizeId?: TSize;
@@ -15,7 +17,8 @@ export const App: React.FC<IProps> = (props): JSX.Element => {
   const theme = { ...useTheme().App }
   return (
     <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
-      <h1>Hello world!</h1>
+      <Header sizeId={sizeId} langId={langId} />
+      <Main sizeId={sizeId} langId={langId} />
     </CWrap>
   );
 };
