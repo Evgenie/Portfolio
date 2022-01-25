@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 
+
 export const resets = css`
 * {                
     margin: 0;
@@ -9,8 +10,9 @@ export const resets = css`
 html,
 body {
     height: 100%;
-    line-height: 1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.05;
+    font-family: Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 `;
 

@@ -3,11 +3,9 @@ import { TCSSObjProps } from "../../../definitions";
 export const blocks: TCSSObjProps = {
    core: {
       display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      height: '1000vh',
-      backgroundColor: '#151515',
-      color: '#ffffff'     
+      alignItems: 'flex-start',
+      height: '25%',
+      width: '91vw',
    },
    mobile: {},
    laptop: {},

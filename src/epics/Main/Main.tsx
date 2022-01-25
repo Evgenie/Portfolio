@@ -16,43 +16,6 @@ export const Main: React.FC<IProps> = (props): JSX.Element => {
   return (
     <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
       <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
-      <h1>Hello world!</h1>
     </CWrap>
   );
 };

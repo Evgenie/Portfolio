@@ -1,13 +1,11 @@
 import { TCSSObjProps } from "../../../definitions";
+import { BUTTON_MENU } from "../../images";
 
 export const blocks: TCSSObjProps = {
    core: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      height: '1000vh',
-      backgroundColor: '#151515',
-      color: '#ffffff'     
+      width: '12px',
+      height: '12px',
+      cursor: 'pointer',
    },
    mobile: {},
    laptop: {},
