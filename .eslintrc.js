@@ -1,57 +1,42 @@
 module.exports = {
+    "root": true,
     "env": {
         "browser": true,
-        "jest": true,
         "es2021": true,
         "node": true
     },
-    "extends": "plugin:react/recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "tsconfigRootDir": './',
     },
     "plugins": [
         "react",
         "@typescript-eslint"
     ],
-    "rules": {},
-    "globals": {
-        "React": true,
-        "google": true,
-        "mount": true,
-        "mountWithRouter": true,
-        "shallow": true,
-        "shallowWithRouter": true,
-        "context": true,
-        "expect": true,
-        "jsdom": true,
-        "JSX": true,
+    "rules": {
     },
     "overrides": [
         {
-            "files": ['*.test.js', '**/__tests__/**'],
-            "env": {
-                "jest": true,
-            },
-        },
-        {
-            "files": ['**/*.stories.*'],
+            "files": ["*.ts", "*.tsx"],
             "rules": {
-                'import/no-anonymous-default-export': 'off',
+                "ban-ts-ignore": 'off',
             },
+            "extends": [
+                'plugin:@typescript-eslint/recommended',
+                'plugin:@typescript-eslint/recommended-requiring-type-checking',
+            ],
             "parserOptions": {
-                "project": './tsconfig.json',
+                "project": ['./tsconfig.json'],
             },
-        },
-        {
-            "files": ['**/packages/*/src/*', '**/packages/*/src/**/*'],
-            "rules": {
-                'import/no-commonjs': 2,
-            },
-        },
-        ],
+        }
+    ]
 }
