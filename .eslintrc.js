@@ -16,7 +16,7 @@ module.exports = {
         },
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "tsconfigRootDir": './',
+        "tsconfigRootDir": __dirname,
     },
     "plugins": [
         "react",
@@ -27,15 +27,17 @@ module.exports = {
     "overrides": [
         {
             "files": ["*.ts", "*.tsx"],
-            "rules": {
-                "ban-ts-ignore": 'off',
-            },
             "extends": [
                 'plugin:@typescript-eslint/recommended',
                 'plugin:@typescript-eslint/recommended-requiring-type-checking',
             ],
             "parserOptions": {
                 "project": ['./tsconfig.json'],
+            },
+            "rules": {
+                "@typescript-eslint/ban-ts-comment": "off",
+                "@typescript-eslint/no-unsafe-assignment": "off",
+                "@typescript-eslint/no-unsafe-member-access": "off",
             },
         }
     ]
