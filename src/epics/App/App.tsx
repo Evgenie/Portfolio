@@ -13,8 +13,8 @@ export interface IProps {
 
 export const App: React.FC<IProps> = (props): JSX.Element => {
   const { sizeId = 'desktop', langId = 'ru', } = props;
-  //@ts-ignore
-  const theme = { ...useTheme().App }
+
+  const theme = { ...useTheme().theme.App }
   return (
     <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
       <Header sizeId={sizeId} langId={langId} />

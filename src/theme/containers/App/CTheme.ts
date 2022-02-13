@@ -1,6 +1,6 @@
 import cwrap from "./cwrap";
 
-export interface ICTheme {
+export type ICTheme = {
     cwrap: typeof cwrap;
 }
 
