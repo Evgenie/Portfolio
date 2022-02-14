@@ -7,3 +7,4 @@ export { mqfp } from './mediaQueries';
 export { mq } from './mediaQueries';
 
 export { mq as default } from './mediaQueries';
+export type { TThemes } from './TThemes';

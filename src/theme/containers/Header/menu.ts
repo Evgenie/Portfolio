@@ -1,5 +1,4 @@
 import { TCSSObjProps } from "../../../definitions";
-import { BUTTON_MENU } from "../../images";
 
 export const blocks: TCSSObjProps = {
    core: {
