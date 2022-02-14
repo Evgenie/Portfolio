@@ -1,19 +1,22 @@
 import { css } from "@emotion/react";
+import mq from "../definitions";
 
 
-export const resets = css`
-* {                
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html,
-body {
-    height: 100%;
-    font-size: 16px;
-    line-height: 1.05;
-    font-family: Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-}
-`;
+export const resets = css({
+    '*': {
+        margin: '0',
+        padding: '0',
+        boxSizing: 'border-box',
+    },
+    'html,body': {
+        height: '100%',
+        fontSize: '10px',
+        lineHeight: '1.5',
+        fontFamily: 'Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+        [mq[3]]: {
+            fontSize: '16px',
+        },
+    }
+});
 
 export default resets;
