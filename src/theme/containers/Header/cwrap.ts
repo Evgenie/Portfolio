@@ -1,4 +1,4 @@
-import { mqfp, TCSSObjProps } from "../../../definitions";
+import { mq, TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
@@ -7,8 +7,8 @@ export const blocks: TCSSObjProps = {
       width: '100%',
       alignItems: 'center',
       justifyContent: 'center',
-      '@media': mqfp({
-         padding: [, '2rem 0', '50px 0', , '50px 0'],
+      '&': mq({
+         padding: ['2rem 0','2rem 0', '50px 0']
       }),
    },
    mobile: {},

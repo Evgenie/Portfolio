@@ -1,14 +1,15 @@
 import '@emotion/react';
-import themes from "../theme";
+import { TCSSObjProps } from '.';
+import theme from "../theme";
 
-export type TThemes = typeof themes;
+export type TThemes = typeof theme;
 
-// export type TThemesMembers = {
-//   [key in keyof typeof themes[keyof TThemes]]: TCSSObjProps;
-// }
+export type TThemesMembers = TThemes[keyof TThemes];
 
-declare module '@emotion/react' {
-  export interface Theme {
-    fullTheme: TThemes;
-  }
+export type TThemesObjMembers = {
+  [key in keyof TThemesMembers]: TCSSObjProps;
 }
+
+// declare module '@emotion/react' {
+//   export interface Theme extends TThemes {}
+// }

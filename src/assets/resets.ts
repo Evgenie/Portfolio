@@ -13,9 +13,9 @@ export const resets = css({
         fontSize: '10px',
         lineHeight: '1.5',
         fontFamily: 'Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
-        [mq[3]]: {
-            fontSize: '16px',
-        },
+        '&': mq({
+            fontSize: ['10px', 'calc(14px + 2*(100vw - 320px)/1600)', '', '', '16px'],
+        }),
     }
 });
 
