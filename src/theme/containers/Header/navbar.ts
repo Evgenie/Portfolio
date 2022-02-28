@@ -3,6 +3,7 @@ import { TCSSObjProps } from "../../../definitions";
 export const blocks: TCSSObjProps = {
    core: {
       display: 'flex',
+      marginLeft: 'auto',
       listStyle: 'none',
    },
    mobile: {},

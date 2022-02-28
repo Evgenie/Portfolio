@@ -8,7 +8,7 @@ export const blocks: TCSSObjProps = {
       alignItems: 'center',
       justifyContent: 'center',
       '&': mq({
-         padding: ['2rem 0','2rem 0', '50px 0']
+         padding: ['2rem','2rem', '50px']
       }),
    },
    mobile: {},

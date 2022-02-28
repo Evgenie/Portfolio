@@ -5,6 +5,7 @@ export const blocks: TCSSObjProps = {
       transition: 'opacity .35s cubic-bezier(.3,.86,.36,.95)',
       background: 'none',
       padding: '0',
+      marginRight: '1rem',
       border: '0',
       color: 'currentColor',
       display: 'flex',

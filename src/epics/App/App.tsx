@@ -4,6 +4,7 @@ import { TSize } from '../../definitions/TElementProps';
 import { CWrap } from './App.styles';
 import Main from '../Main';
 import Header from '../../features/Header';
+import Footer from '../../features/Footer';
 
 export interface IProps {
   sizeId?: TSize;
@@ -19,6 +20,7 @@ export const App: React.FC<IProps> = (props): JSX.Element => {
     <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
       <Header sizeId={sizeId} langId={langId} />
       <Main sizeId={sizeId} langId={langId} />
+      <Footer sizeId='mobile'/>
     </CWrap>
   );
 };

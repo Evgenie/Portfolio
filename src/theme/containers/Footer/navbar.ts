@@ -2,11 +2,12 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
-      display: 'flex',
-      justifyContent: 'flex-start',
-      width: '25%',
    },
-   mobile: {},
+   mobile: {
+      display: 'flex',
+      marginLeft: 'auto',
+      listStyle: 'none',
+   },
    laptop: {},
    desktop: {},
 };

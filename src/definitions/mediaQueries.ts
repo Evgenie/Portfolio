@@ -1,4 +1,11 @@
+import { CSSObject } from '@emotion/react';
 import facepaint from 'facepaint';
+
+declare module 'facepaint' {
+    export interface DynamicStyle {
+        [key: string]: CSSObject;
+    }
+}
 
 export const breakpoints = [320, 1024, 1440, 1920];
 
