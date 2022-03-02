@@ -31,15 +31,3 @@ export type ICTerminProps = TElementProps;
 export const Termin = styled.div<ICTerminProps>`
 ${getCSSObj}
 `;
-
-export type ICNavBarProps = TElementProps;
-
-export const NavBar = styled.ul<ICNavBarProps>`
-${getCSSObj}
-`;
-
-export type ICLinkNavProps = TElementProps;
-
-export const LinkNav = styled.li<ICLinkNavProps>`
-${getCSSObj}
-`;

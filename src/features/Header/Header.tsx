@@ -2,7 +2,8 @@ import { useTheme } from '@emotion/react';
 import React from 'react';
 import { TSize } from '../../definitions/TElementProps';
 import { BUTTON_MENU } from '../../theme/images';
-import { Button, CWrap, LinkNav, Logo, Menu, NavBar, Termin } from './Header.styles';
+import Navbar from '../Navbar';
+import { Button, CWrap, Logo, Menu, Termin } from './Header.styles';
 
 export interface IProps {
     sizeId?: TSize;
@@ -30,11 +31,7 @@ export const Header: React.FC<IProps> = (props): JSX.Element => {
                     Agency
                 </p>
             </Termin>
-            <NavBar sizeId={sizeId} theme={theme.navbar}>
-                <LinkNav sizeId={sizeId} theme={theme.linknav}>Works</LinkNav>
-                <LinkNav sizeId={sizeId} theme={theme.linknav}>About</LinkNav>
-                <LinkNav sizeId={sizeId} theme={theme.linknav}>Contacts</LinkNav>
-            </NavBar>
+            <Navbar sizeId={sizeId} theme={theme.navbar}/>
         </CWrap>
     );
 };
