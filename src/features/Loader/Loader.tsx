@@ -9,11 +9,10 @@ const Loader: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'mobile', langId = 'ru' } = props;
     const [counter, setCounter] = useState(0);
 
-    const counterIncrement = (num: number) => num += 1;
+    const counterIncrement = (num: number) => num === 100 ? num : num += 1;
 
     useEffect(() => {
-        const counterId = setInterval(()=>setCounter(counterIncrement(counter)), 10)
-
+        const counterId = setInterval(()=>setCounter(counterIncrement(counter)), 10);
         return () => {
             clearInterval(counterId)
         }
