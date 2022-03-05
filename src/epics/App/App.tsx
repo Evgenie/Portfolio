@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '@emotion/react';
+import { Transition } from 'react-transition-group';
 import { TSize } from '../../definitions/TElementProps';
 import { CWrap } from './App.styles';
 import Main from '../Main';
@@ -17,7 +18,7 @@ export interface IProps {
 export const App: React.FC<IProps> = (props): JSX.Element => {
   const { sizeId = 'desktop', langId = 'ru', } = props;
   const [loaderVisibility, setLoaderVisibility] = useState(true)
-  const [mouseCoords, setMouseCoords] = useState({x: 0, y: 0})
+  const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 })
 
 
 
@@ -29,16 +30,14 @@ export const App: React.FC<IProps> = (props): JSX.Element => {
   });
 
   return (
-    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} onMouseMove={(e)=>setMouseCoords({x: e.pageX, y: e.pageY})}>
+    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} onMouseMove={(e) => setMouseCoords({ x: e.pageX, y: e.pageY })}>
       <Cursor sizeId={sizeId} langId={langId} mouseCoords={mouseCoords} />
-      {loaderVisibility
-        ? <Loader sizeId={sizeId} langId={langId} />
-        : <>
-          <Header sizeId={sizeId} langId={langId} />
-          <Main sizeId={sizeId} langId={langId} />
-          <Footer sizeId='mobile' />
-        </>
-      }
+      <Transition in={loaderVisibility} timeout={1000}>
+        <Loader sizeId={sizeId} langId={langId} />
+      </Transition>
+      <Header sizeId={sizeId} langId={langId} />
+      <Main sizeId={sizeId} langId={langId} />
+      <Footer sizeId='mobile' />
     </CWrap>
   );
 };
