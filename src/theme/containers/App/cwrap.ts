@@ -7,6 +7,7 @@ export const blocks: TCSSObjProps = {
       alignItems: 'center',    
       width: '100vw',
       minHeight: '100vh',
+      cursor: 'none',
    },
    mobile: {},
    laptop: {},

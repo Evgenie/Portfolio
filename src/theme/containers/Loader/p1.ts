@@ -2,8 +2,8 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
-      marginLeft: '4rem',
-      marginRight: '1rem',
+      display: 'flex',
+      fontSize: '80px',
    },
    mobile: {},
    laptop: {},

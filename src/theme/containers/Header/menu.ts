@@ -2,19 +2,11 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
-      transition: 'opacity .35s cubic-bezier(.3,.86,.36,.95)',
-      background: 'none',
-      padding: '0',
-      marginRight: '1rem',
-      border: '0',
-      color: 'currentColor',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
       position: 'relative',
+      border: '0',
+      background: 'none',
       zIndex: '2',
-      backfaceVisibility: 'hidden',
-      outline: '1px solid transparent',
+      transition: 'opacity .35s cubic-bezier(.3,.86,.36,.95)',
       '&:before': {
          content: '""',
          width: '55px',
