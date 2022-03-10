@@ -1,6 +1,4 @@
 import { css } from "@emotion/react";
-import mq from "../definitions";
-
 
 export const resets = css({
     '*': {
@@ -15,12 +13,9 @@ export const resets = css({
         width: '100vw',
         backgroundColor: '#151515',
         color: '#ffffff',
-        fontSize: '10px',
         lineHeight: '1.5',
         fontFamily: 'Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
-        '&': mq({
-            fontSize: ['10px', 'calc(14px + 2*(100vw - 320px)/1600)', '', '', '16px'],
-        }),
+        fontSize: 'calc(14px + 2*(100vw - 320px)/1600)',
     },
 });
 
