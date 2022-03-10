@@ -3,7 +3,7 @@ import { TCSSObjProps } from "../../../definitions";
 export const blocks: TCSSObjProps = {
    core: {
       marginLeft: '2rem',
-      cursor: 'pointer',
+      cursor: 'none',
    },
    mobile: {},
    laptop: {},
