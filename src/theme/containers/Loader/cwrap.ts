@@ -8,7 +8,7 @@ export const blocks: TCSSObjProps = {
       justifyContent: 'center', 
       width: '100vw',
       minHeight: '100vh',
-      fontSize: '80px',
+      padding: '0 20vw',
       backgroundColor: '#000',
    },
    mobile: {},
