@@ -8,6 +8,7 @@ module.exports = {
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -20,9 +21,14 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks",
     ],
     "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": ["warn", {
+            "additionalHooks": "(useMyCustomHook|useMyOtherCustomHook)"
+          }],
     },
     "overrides": [
         {

@@ -8,20 +8,20 @@ export const CWrap = styled.div<ICWrapProps>`
 ${getCSSObj}
 `;
 
-export type IP1Props = TElementProps;
+export type IPWrapProps = TElementProps;
 
-export const P1 = styled.div<IP1Props>`
+export const PWrap = styled.div<IPWrapProps>`
 ${getCSSObj}
 `;
 
-export type ICountProps = TElementProps;
+export type IWaitProps = TElementProps;
 
-export const Count = styled.div<ICountProps>`
+export const Wait = styled.div<IWaitProps>`
 ${getCSSObj}
 `;
 
-export type IP2Props = TElementProps;
+export type IGreatProps = TElementProps;
 
-export const P2 = styled.div<IP2Props>`
+export const Great = styled.div<IGreatProps>`
 ${getCSSObj}
 `;

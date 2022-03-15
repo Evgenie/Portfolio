@@ -10,6 +10,7 @@ export const blocks: TCSSObjProps = {
       border: '1px solid #a4a4a4',
       borderRadius: '50%',
       zIndex:'3000',
+      display: 'none',
    },
    mobile: {},
    laptop: {},

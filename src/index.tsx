@@ -8,7 +8,7 @@ import theme from './theme';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <App />
+  <App sizeId={'desktop'} langId={'ru'} />
     <Global styles={resets || css``} />
   </ThemeProvider>,
   document.getElementById('root')

@@ -1,20 +1,20 @@
 import cwrap from "./cwrap";
-import p1 from "./p1";
-import count from "./count";
-import p2 from "./p2";
+import pwrap from "./pwrap";
+import wait from "./wait";
+import great from "./great";
 
 export type ICTheme = {
     cwrap: typeof cwrap;
-    p1: typeof p1;
-    count: typeof count;
-    p2: typeof p2;
+    pwrap: typeof pwrap;
+    wait: typeof wait;
+    great: typeof great;
 }
 
 export const CTheme: ICTheme = {
     cwrap,
-    p1,
-    p2,
-    count,
+    pwrap,
+    wait,
+    great,
 };
 
 export default CTheme;

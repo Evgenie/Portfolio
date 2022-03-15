@@ -14,7 +14,7 @@ export const resets = css({
         backgroundColor: '#151515',
         color: '#ffffff',
         lineHeight: '1.5',
-        fontFamily: 'Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+        fontFamily: 'Arimo, "Helvetica Neue", HelveticaNeue, "TeX Gyre Heros", TeXGyreHeros, FreeSans, "Nimbus Sans L", "Liberation Sans", Arimo, Helvetica, Arial, sans-serif',
         fontSize: 'calc(14px + 2*(100vw - 320px)/1600)',
     },
 });
