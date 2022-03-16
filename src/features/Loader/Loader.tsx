@@ -9,20 +9,18 @@ export type IProps = TElementProps;
 
 export const Loader: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'mobile', langId = 'ru' } = props;
-    const sentence = 'YOUR WEB EXPERIENCE IS LOADING RIGHT NOW'.split(' ');
+    const sentence = 'YOUR WEB EXPERIENCE IS LOADING RIGHT NOW';
 
     //@ts-ignore
     const theme = { ...useTheme().Loader };
     return (
         <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
             <Count sizeId={sizeId} langId={langId} />
-            {sentence.map((wrld) =>
-                <Great sizeId={sizeId} theme={theme.great} key={wrld}>
-                    {wrld}
+                <Great sizeId={sizeId} theme={theme.great}>
+                    {sentence}
                 </Great>
-            )}
             <Wait sizeId={sizeId} theme={theme.wait}>
-                <br /> Please waite a few seconds.
+                Please wait <br /> a few seconds.
             </Wait>
         </CWrap>
     );

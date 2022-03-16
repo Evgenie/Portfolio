@@ -3,9 +3,7 @@ import { moveUp } from "./keyframes";
 
 export const blocks: TCSSObjProps = {
    core: {
-      gridRow: '2',
-      gridColumnStart: '2',
-      fontSize: '30px',
+      fontSize: '2vw',
       transform: 'translateY(150%)',
       animation: `${moveUp} 1s ease forwards`
    },
