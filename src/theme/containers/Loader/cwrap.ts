@@ -2,14 +2,14 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 3fr',
-      gridTemplateRows: '1fr 1fr 1fr 1fr',
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignContent: 'center',
+      justifyContent: 'flex-start',
       width: '100vw',
       minHeight: '100vh',
-      padding: '15vh 20vw',
+      padding: '0 5vw',
       backgroundColor: '#000',
-      overflow: 'hidden,'
    },
    mobile: {},
    laptop: {},

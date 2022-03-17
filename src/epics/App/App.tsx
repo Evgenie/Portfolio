@@ -19,7 +19,7 @@ export const App: React.FC<IProps> = (props): JSX.Element => {
   const theme = { ...useTheme().App };
 
   useEffect(() => {
-    setTimeout(() => setShowLoader(false), 3000);
+    setTimeout(() => setShowLoader(false), 5000);
   });
 
   return (

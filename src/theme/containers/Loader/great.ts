@@ -3,13 +3,9 @@ import { moveUp } from "./keyframes";
 
 export const blocks: TCSSObjProps = {
    core: {
-      fontSize: '4vw',
+      fontSize: '7vw',
       transform: 'translateY(150%)',
       animation: `${moveUp} 1s ease forwards`,
-      marginRight: '1vw',
-      ':last-of-type': {
-         marginRight:'0',
-      },
    },
    mobile: {},
    laptop: {},

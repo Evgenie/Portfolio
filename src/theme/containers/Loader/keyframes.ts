@@ -8,3 +8,17 @@ export const moveUp = keyframes({
         transform: `translateY(0)`,
     },
 });
+
+export const show = keyframes({
+    '0%': {
+        opacity: '0',
+    },
+    '100%': {
+        opacity: '1',
+    }
+});
+
+export default {
+    moveUp,
+    show,
+}

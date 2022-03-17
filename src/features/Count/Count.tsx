@@ -12,7 +12,7 @@ export const Count: React.FC<IProps> = (props): JSX.Element => {
     const counterIncrement = (num: number) => num === 100 ? num : num += 1;
 
     useEffect(() => {
-        const counterId = setInterval(() => setCounter(counterIncrement(counter)), 15);
+        const counterId = setInterval(() => setCounter(counterIncrement(counter)), 30);
         return () => {
             clearInterval(counterId);
         }
