@@ -10,11 +10,11 @@ export interface IProps {
 }
 
 export const Main: React.FC<IProps> = (props): JSX.Element => {
-  const { sizeId = 'desktop', langId = 'ru', } = props;
+  const { sizeId = 'desktop', } = props;
   //@ts-ignore
   const theme = { ...useTheme().Main }
   return (
-    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
+    <CWrap sizeId={sizeId} theme={theme.cwrap}>
       <Discr sizeId={sizeId} theme={theme.discr}>
         WE DESIGN <br /> UNIQUE <br />
         WEB / GRAPHIC <br />

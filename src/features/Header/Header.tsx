@@ -13,12 +13,12 @@ export interface IProps {
 
 
 export const Header: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'desktop', langId = 'ru', } = props;
+    const { sizeId = 'desktop', } = props;
 
     //@ts-ignore
     const theme = { ...useTheme().Header };
     return (
-        <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
+        <CWrap sizeId={sizeId} theme={theme.cwrap}>
             <Menu sizeId={sizeId} theme={theme.menu}>
                 <Button sizeId={sizeId} theme={theme.button} src={BUTTON_MENU} alt='button' />
             </Menu>

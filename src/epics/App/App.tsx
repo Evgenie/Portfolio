@@ -29,11 +29,11 @@ export const App: React.FC<IProps> = (props): JSX.Element => {
     }}
       onMouseMove={showLoader ? undefined : (e) => setMoveMouse({ x: e.clientX, y: e.clientY })}
     >
-      {/* {showLoader && <Loader sizeId={sizeId} langId={langId} />} */}
-      <Loader sizeId={sizeId} langId={langId} />
-      <Cursor sizeId={sizeId} langId={langId} mouseCoords={moveMouse} showLoader={showLoader} />
-      <Header sizeId={sizeId} langId={langId} />
-      <Main sizeId={sizeId} langId={langId} />
+      {/* {showLoader && <Loader sizeId={sizeId}  />} */}
+      <Loader sizeId={sizeId}  />
+      <Cursor sizeId={sizeId}  mouseCoords={moveMouse} showLoader={showLoader} />
+      <Header sizeId={sizeId}  />
+      <Main sizeId={sizeId}  />
       <Footer sizeId={sizeId} />
     </CWrap>
   );

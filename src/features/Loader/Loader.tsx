@@ -8,14 +8,14 @@ export type IProps = TElementProps;
 
 
 export const Loader: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'mobile', langId = 'ru' } = props;
+    const { sizeId = 'mobile', } = props;
     const sentence = 'YOUR WEB EXPERIENCE IS LOADING RIGHT NOW'.split(' ');
 
     //@ts-ignore
     const theme = { ...useTheme().Loader };
     return (
-        <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
-            <Count sizeId={sizeId} langId={langId} />
+        <CWrap sizeId={sizeId} theme={theme.cwrap}>
+            <Count sizeId={sizeId} />
             {sentence.map((word, index) =>
                 <PWrap sizeId={sizeId} theme={theme.pwrap} key={word} style={{
                     flex: index === 0 || index === 2 ? '1 0 70%' : '',

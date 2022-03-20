@@ -9,11 +9,11 @@ export type IProps = TElementProps & {
 };
 
 const Cursor: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'desktop', langId = 'ru', mouseCoords = { x: 0, y: 0 }, showLoader = true, } = props;
+    const { sizeId = 'desktop', mouseCoords = { x: 0, y: 0 }, showLoader = true, } = props;
     //@ts-ignore
     const theme = { ...useTheme().Cursor };
     return (
-        <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} style={ showLoader ? {} : {
+        <CWrap sizeId={sizeId} theme={theme.cwrap} style={ showLoader ? {} : {
             transform: `translate(${mouseCoords.x - 21}px, ${mouseCoords.y - 21}px)`,
             display: 'block',
         }} />
