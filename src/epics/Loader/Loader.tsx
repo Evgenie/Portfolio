@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from '@emotion/react';
 import { TElementProps } from '../../definitions';
-import Count from '../Count';
+import Count from '../../features/Count';
 import { CWrap, Great, PWrap, Wait } from './Loader.styles';
 
 export type IProps = TElementProps;

@@ -5,7 +5,7 @@ import { CWrap } from './App.styles';
 import Main from '../Main';
 import Header from '../../features/Header';
 import Footer from '../../features/Footer';
-import Loader from '../../features/Loader';
+import Loader from '../Loader';
 import Cursor from '../../features/Cursor';
 
 export type IProps = TElementProps;
