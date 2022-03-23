@@ -6,10 +6,10 @@ export const resets = css({
         padding: '0',
         boxSizing: 'border-box',
     },
-    'html': {
+    html: {
         height: '100%',
     },
-    'body': {
+    body: {
         width: '100vw',
         backgroundColor: '#151515',
         color: '#ffffff',

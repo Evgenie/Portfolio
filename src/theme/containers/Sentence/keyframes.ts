@@ -19,10 +19,10 @@ export const show = keyframes({
 });
 
 export const fontStyle = keyframes({
-    'from': {
+    '0%': {
         fontStyle: 'normal',
     },
-    'to': {
+    '100%': {
         fontStyle: 'italic',
     }
 })
@@ -30,5 +30,5 @@ export const fontStyle = keyframes({
 export default {
     moveUp,
     show,
-    fontStyle
+    fontStyle,
 }

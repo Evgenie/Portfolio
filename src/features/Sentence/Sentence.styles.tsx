@@ -8,8 +8,8 @@ export const CWrap = styled.div<ICWrapProps>`
 ${getCSSObj}
 `;
 
-export type IWaitProps = TElementProps;
+export type IWWrapProps = TElementProps;
 
-export const Wait = styled.div<IWaitProps>`
+export const WWrap = styled.div<IWWrapProps>`
 ${getCSSObj}
 `;

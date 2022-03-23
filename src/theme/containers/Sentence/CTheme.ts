@@ -1,14 +1,14 @@
 import cwrap from "./cwrap";
-import wait from "./wait";
+import wwrap from "./wwrap";
 
 export type ICTheme = {
     cwrap: typeof cwrap;
-    wait: typeof wait;
+    wwrap: typeof wwrap;
 }
 
 export const CTheme: ICTheme = {
     cwrap,
-    wait,
+    wwrap,
 };
 
 export default CTheme;

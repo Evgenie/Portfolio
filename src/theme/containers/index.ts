@@ -4,6 +4,7 @@ import Header from "./Header";
 import Loader from "./Loader";
 import Main from './Main';
 import Navbar from "./Navbar";
+import Sentence from "./Sentence";
 
 
 export default {
@@ -13,4 +14,5 @@ export default {
     Footer,
     Navbar,
     Loader,
+    Sentence,
 };

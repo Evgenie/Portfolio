@@ -1,0 +1,45 @@
+import { useTheme } from '@emotion/react';
+import React, { useEffect, useState } from 'react'
+import { TElementProps } from '../../definitions';
+import { CWrap, WWrap } from './Sentence.styles';
+
+export type IProps = TElementProps;
+
+
+export const Sentence: React.FC<IProps> = (props): JSX.Element => {
+    const { sizeId = 'mobile', } = props;
+    const [sentence] = useState('YOUR WEB EXPERIENCE IS LOADING RIGHT NOW'.split(' '));
+    const [fontStyle, setFontStyle] = useState('');
+    const changeFontStyle = () => fontStyle === '' ? 'italic' : '';
+    useEffect(() => {
+        const SentenceId = setInterval(() => setFontStyle(changeFontStyle), 700);
+        return () => {
+            clearInterval(SentenceId);
+        }
+    });
+    //@ts-ignore
+    const theme = { ...useTheme().Sentence };
+    return (
+        <>
+            {sentence.map((word, index, arr) => {
+                const length = arr.length;
+                return (
+                    <CWrap sizeId={sizeId} theme={theme.cwrap} key={word} style={{
+                        flex: index === 0 || index === 2 ? '1 0 70%' : '',
+                        marginRight: index === length - 1 ? '0' : '',
+                    }}>
+                        <WWrap sizeId={sizeId} theme={theme.wwrap} style={{
+                            animationDelay: index === 1 || index === 2 ? '300ms' : index > 2 ? '500ms' : '',
+                            fontStyle: index === length - 1 ? fontStyle : '',
+                            paddingRight: index === length - 1 ? '1vw' : '',
+                        }}>
+                            {word}
+                        </WWrap>
+                    </CWrap>
+                );
+            })}
+        </>
+    );
+}
+
+export default Sentence;

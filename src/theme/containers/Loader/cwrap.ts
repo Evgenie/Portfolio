@@ -1,4 +1,5 @@
 import { TCSSObjProps } from "../../../definitions";
+import { fontStyle } from "./keyframes";
 
 export const blocks: TCSSObjProps = {
    core: {
@@ -10,6 +11,9 @@ export const blocks: TCSSObjProps = {
       minHeight: '100vh',
       padding: '0 5vw',
       backgroundColor: '#000',
+      ':nth-child(-2)': {
+         animation: `${fontStyle} 2s linear infinite`
+      }
    },
    mobile: {},
    laptop: {},

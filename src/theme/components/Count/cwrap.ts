@@ -8,7 +8,7 @@ export const blocks: TCSSObjProps = {
       fontSize: '3.3vw',
       opacity: '0',
       width: '20vw',
-      fontFamily: '"Silk Serif", Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+      fontFamily: '"Great Vibes", cursive',
       fontStyle: 'italic',
       animation: `${show} 3s ease forwards`,
    },
