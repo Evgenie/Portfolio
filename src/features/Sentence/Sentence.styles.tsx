@@ -13,3 +13,9 @@ export type IWWrapProps = TElementProps;
 export const WWrap = styled.div<IWWrapProps>`
 ${getCSSObj}
 `;
+
+export type ILastProps = TElementProps;
+
+export const Last = styled.div<ILastProps>`
+${getCSSObj}
+`;
