@@ -8,7 +8,7 @@ export const blocks: TCSSObjProps = {
       paddingRight: '1vw',
       fontStyle: 'italic',
       transform: 'translateY(150%)',
-      animation: `${lastWord} 4s ease 500ms forwards`,
+      animation: `${lastWord} 4s ease 500ms`,
    },
    mobile: {},
    laptop: {},

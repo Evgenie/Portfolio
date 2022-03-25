@@ -24,16 +24,14 @@ export const App: React.FC<IProps> = (props): JSX.Element => {
 
   return (
     <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} style={{
-      // position: showLoader ? 'fixed' : 'relative',
-      position: 'fixed',
+      position: showLoader ? 'fixed' : 'relative',
     }}
       onMouseMove={showLoader ? undefined : (e) => setMoveMouse({ x: e.clientX, y: e.clientY })}
     >
-      {/* {showLoader && <Loader sizeId={sizeId}  />} */}
-      <Loader sizeId={sizeId}  />
-      <Cursor sizeId={sizeId}  mouseCoords={moveMouse} showLoader={showLoader} />
-      <Header sizeId={sizeId}  />
-      <Main sizeId={sizeId}  />
+      {showLoader && <Loader sizeId={sizeId} />}
+      <Cursor sizeId={sizeId} mouseCoords={moveMouse} showLoader={showLoader} />
+      <Header sizeId={sizeId} />
+      <Main sizeId={sizeId} />
       <Footer sizeId={sizeId} />
     </CWrap>
   );

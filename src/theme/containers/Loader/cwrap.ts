@@ -1,5 +1,5 @@
 import { TCSSObjProps } from "../../../definitions";
-import { fontStyle } from "./keyframes";
+import { slideUp } from "./keyframes";
 
 export const blocks: TCSSObjProps = {
    core: {
@@ -7,13 +7,13 @@ export const blocks: TCSSObjProps = {
       flexWrap: 'wrap',
       alignContent: 'center',
       justifyContent: 'flex-start',
+      position: 'fixed',
       width: '100vw',
       minHeight: '100vh',
       padding: '0 5vw',
       backgroundColor: '#000',
-      ':nth-child(-2)': {
-         animation: `${fontStyle} 2s linear infinite`
-      }
+      zIndex: '1000', 
+      animation: `${slideUp} 500ms cubic-bezier(.92,.33,.27,.97) 4500ms forwards`
    },
    mobile: {},
    laptop: {},

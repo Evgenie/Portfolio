@@ -5,7 +5,7 @@ export const blocks: TCSSObjProps = {
    core: {
       fontSize: '7vw',
       transform: 'translateY(150%)',
-      animation: `${moveUp} 1s ease forwards`,
+      animation: `${moveUp} 4s ease forwards`,
    },
    mobile: {},
    laptop: {},

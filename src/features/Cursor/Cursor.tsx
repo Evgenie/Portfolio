@@ -13,9 +13,9 @@ const Cursor: React.FC<IProps> = (props): JSX.Element => {
     //@ts-ignore
     const theme = { ...useTheme().Cursor };
     return (
-        <CWrap sizeId={sizeId} theme={theme.cwrap} style={ showLoader ? {} : {
+        <CWrap sizeId={sizeId} theme={theme.cwrap} style={showLoader ? undefined : {
             transform: `translate(${mouseCoords.x - 21}px, ${mouseCoords.y - 21}px)`,
-            display: 'block',
+            display: 'inline-block',
         }} />
     )
 }

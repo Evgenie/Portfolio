@@ -6,7 +6,6 @@ export const blocks: TCSSObjProps = {
             border: '0',
             cursor: 'none',
             background: 'none',
-            zIndex: '2',
             transition: 'opacity .35s cubic-bezier(.3,.86,.36,.95)',
             '&:before': {
                   content: '""',

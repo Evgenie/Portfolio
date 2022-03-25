@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { TElementProps } from '../../definitions';
 import { CWrap, Last, WWrap } from './Sentence.styles';
 
@@ -9,14 +9,6 @@ export type IProps = TElementProps;
 export const Sentence: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'mobile', } = props;
     const [sentence] = useState('YOUR WEB EXPERIENCE IS LOADING RIGHT NOW'.split(' '));
-    const [fontStyle, setFontStyle] = useState('');
-    const changeFontStyle = () => fontStyle === '' ? 'italic' : '';
-    useEffect(() => {
-        const SentenceId = setInterval(() => setFontStyle(changeFontStyle), 700);
-        return () => {
-            clearInterval(SentenceId);
-        }
-    });
     //@ts-ignore
     const theme = { ...useTheme().Sentence };
     return (

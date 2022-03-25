@@ -8,7 +8,7 @@ export const blocks: TCSSObjProps = {
       lineHeight: '1.2',
       fontSize: '0.9vw',
       opacity: '0',
-      animation: `${show} 3s ease 800ms forwards`,
+      animation: `${show} 3.5s ease 800ms forwards`,
    },
    mobile: {},
    laptop: {},
