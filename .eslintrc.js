@@ -1,44 +1,51 @@
 module.exports = {
-    env: {
-        browser: true,
-        jest: true,
-        es6: true,
-        node: true,
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
     },
-    extends: ['./index.js'],
-    globals: {
-        React: true,
-        google: true,
-        mount: true,
-        mountWithRouter: true,
-        shallow: true,
-        shallowWithRouter: true,
-        context: true,
-        expect: true,
-        jsdom: true,
-        JSX: true,
-    },
-    overrides: [
-        {
-            files: ['*.test.js', '**/__tests__/**'],
-            env: {
-                jest: true,
-            },
-        },
-        {
-            files: ['**/*.stories.*'],
-            rules: {
-                'import/no-anonymous-default-export': 'off',
-            },
-            parserOptions: {
-                project: './tsconfig.json',
-            },
-        },
-        {
-            files: ['**/packages/*/src/*', '**/packages/*/src/**/*'],
-            rules: {
-                'import/no-commonjs': 2,
-            },
-        },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
     ],
-};
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "tsconfigRootDir": __dirname,
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "react-hooks",
+    ],
+    "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": ["warn", {
+            "additionalHooks": "(useMyCustomHook|useMyOtherCustomHook)"
+          }],
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "extends": [
+                'plugin:@typescript-eslint/recommended',
+                'plugin:@typescript-eslint/recommended-requiring-type-checking',
+            ],
+            "parserOptions": {
+                "project": ['./tsconfig.json'],
+            },
+            "rules": {
+                "@typescript-eslint/ban-ts-comment": "off",
+                "@typescript-eslint/no-unsafe-assignment": "off",
+                "@typescript-eslint/no-unsafe-member-access": "off",
+                "@typescript-eslint/no-empty-interface": "off",
+            },
+        }
+    ]
+}

@@ -1,18 +1,17 @@
-import * as TCSSObjProps from "../definitions/TCSSObjProps";
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+import { CSSObject } from "@emotion/react";
+import { TSize } from "../definitions/TElementProps";
 
-type IElementTheme = {
-  [key in TCSSObjProps.TSectionName]: any;
-};
- 
 type TElementProps = {
-    theme: IElementTheme;
-    [index: string]: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  theme: any;
+  sizeId: TSize;
 }
 
-export const getCSSObj = (props: any): TElementProps => {
+export const getCSSObj = ({ theme, sizeId }: TElementProps): CSSObject => {
   return {
-    ...props.theme.core,
-    ...props.theme[props.sizeId],
+    ...theme.core,
+    ...theme[sizeId],
   };
 };
 
