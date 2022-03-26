@@ -1,14 +1,11 @@
 import { TCSSObjProps } from "../../../definitions";
+import { moveUp } from "./keyframes";
 
 export const blocks: TCSSObjProps = {
    core: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'flex-start',
-      alignContent: 'center',
-      fontSize: '4vw',
-      flex: '1',
-      padding: '0 20vw',
+      fontSize: '7vw',
+      transform: 'translateY(150%)',
+      animation: `${moveUp} 1s ease 4.5s forwards`,
    },
    mobile: {},
    laptop: {},

@@ -9,10 +9,10 @@ export type IProps = TElementProps;
 export const Count: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'mobile', langId = 'ru' } = props;
     const [counter, setCounter] = useState(0);
-    const counterIncrement = (num: number) => num === 100 ? num : num += 1;
+    const counterIncrement = (num = counter) => setCounter(num === 100 ? num : num += 1);
 
     useEffect(() => {
-        const counterId = setInterval(() => setCounter(counterIncrement(counter)), 30);
+        const counterId = setInterval(counterIncrement, 30);
         return () => {
             clearInterval(counterId);
         }
