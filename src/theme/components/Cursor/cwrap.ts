@@ -5,7 +5,7 @@ export const blocks: TCSSObjProps = {
       position: 'fixed',
       left: 0,
       top: 0,
-      width: '42px',
+      minWidth: '42px',
       minHeight: '42px',
       border: '1px solid #a4a4a4',
       borderRadius: '50%',

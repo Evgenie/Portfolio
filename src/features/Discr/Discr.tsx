@@ -15,10 +15,13 @@ export const Discr: React.FC<IProps> = (props): JSX.Element => {
         <>
             {sentence.map((word, index) => {
                 return (
-                    <CWrap sizeId={sizeId} theme={theme.cwrap} key={word} style={{
-                        flex: index === 2 || index === 6 ? '1 0 100%' : '',
-                    }}>
-                        <WWrap sizeId={sizeId} theme={theme.wwrap} >
+                    <CWrap sizeId={sizeId} theme={theme.cwrap} key={word} style={index === 2 || index === 6 ? {
+                        flex: '1 0 100%',
+                        marginRight: '0',
+                    } : undefined}>
+                        <WWrap sizeId={sizeId} theme={theme.wwrap} style={index === 3 || index === 5 ? {
+                            textDecoration: 'underline',
+                        } : undefined}>
                             {word}
                         </WWrap>
                     </CWrap>
