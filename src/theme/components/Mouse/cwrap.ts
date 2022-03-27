@@ -2,12 +2,9 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
-      marginLeft: '4rem',
-      marginRight: '1rem',
-      transition: 'all 1s ease',
-      '&:hover': {
-         transform: 'scale(3)',
-      }
+      height: '100vh',
+      width: '100vw',
+      position: 'fixed',
    },
    mobile: {},
    laptop: {},

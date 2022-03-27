@@ -9,6 +9,8 @@ export type IProps = TElementProps;
 export const Discr: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'mobile', } = props;
     const [sentence] = useState('WE DESIGN UNIQUE WEB / GRAPHIC EXPERIENCE'.split(' '));
+    console.log(sentence);
+    
     //@ts-ignore
     const theme = { ...useTheme().Discr };
     return (
