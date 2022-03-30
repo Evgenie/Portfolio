@@ -2,8 +2,9 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
+      display: 'inline-flex',
       lineHeight: '1',
-      marginRight: '2vw',
+      marginRight: '1vw',
       overflow: 'hidden',
    },
    mobile: {},

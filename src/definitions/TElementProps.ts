@@ -1,8 +1,10 @@
+import TCSSObjProps from "./TCSSObjProps";
+
 export type TSize = 'mobile' | 'laptop' | 'desktop';
 
 export interface TElementProps {
     sizeId: TSize;
-    theme?: unknown;
+    theme?: TCSSObjProps;
     langId?: string;
 }
 

@@ -16,7 +16,7 @@ export const Main: React.FC<IProps> = (props): JSX.Element => {
   const theme = { ...useTheme().Main }
   return (
     <CWrap sizeId={sizeId} theme={theme.cwrap}>
-      <Discr sizeId={sizeId} theme={theme.discr} />
+      <Discr sizeId={sizeId} />
     </CWrap>
   );
 };

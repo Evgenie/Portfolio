@@ -5,6 +5,7 @@ export const blocks: TCSSObjProps = {
       height: '100vh',
       width: '100vw',
       position: 'fixed',
+      zIndex: '0',
    },
    mobile: {},
    laptop: {},
