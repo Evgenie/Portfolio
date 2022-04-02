@@ -1,7 +1,6 @@
 import Count from "./Count";
 import Cursor from "./Cursor";
 import Discr from "./Discr";
-import Mouse from "./Mouse";
 import Sentence from "./Sentence";
 
 export default {
@@ -9,5 +8,4 @@ export default {
     Count,
     Sentence,
     Discr,
-    Mouse,
 };

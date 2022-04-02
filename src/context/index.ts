@@ -1,5 +1,5 @@
-import mouseCoords from "./mouseCoords";
+import MouseContext from "./MouseContext";
 
 export default {
-    mouseCoords,
+    MouseContext,
 }

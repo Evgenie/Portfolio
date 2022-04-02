@@ -1,14 +1,14 @@
 import { useTheme } from '@emotion/react';
-import React from 'react'
+import React, { useContext } from 'react'
+import MouseContext from '../../context/MouseContext';
 import { TElementProps } from '../../definitions';
 import { CWrap } from './Cursor.styles';
 
-export type IProps = TElementProps & {
-    mouseCoords: { x: number, y: number };
-};
+export type IProps = TElementProps;
 
 const Cursor: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'desktop', mouseCoords = { x: 0, y: 0 }, } = props;
+    const { sizeId = 'desktop', } = props;
+    const mouseCoords = useContext(MouseContext);
     //@ts-ignore
     const theme = { ...useTheme().Cursor };
     return (
