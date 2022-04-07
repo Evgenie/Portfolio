@@ -22,13 +22,13 @@ export const App: React.FC<IProps> = (props): JSX.Element => {
     setTimeout(() => setShowLoader(false), 5000);
   });
   return (
-    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} onMouseMove={handleMoveMouse}>
+    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} onMouseMove={showLoader ? undefined : handleMoveMouse}>
       <MouseContext.Provider value={moveMouse}>
         {showLoader && <Loader sizeId={sizeId} />}
-        <Cursor sizeId={sizeId} />
         <Header sizeId={sizeId} />
         <Main sizeId={sizeId} />
         <Footer sizeId={sizeId} />
+        <Cursor sizeId={sizeId} />
       </MouseContext.Provider>
     </CWrap>
   );

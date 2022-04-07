@@ -22,7 +22,7 @@ ${getCSSObj}
 
 export type ICLogoProps = TElementProps;
 
-export const Logo = styled.h1<ICLogoProps>`
+export const Logo = styled.div<ICLogoProps>`
 ${getCSSObj}
 `;
 

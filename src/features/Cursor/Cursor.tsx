@@ -13,7 +13,7 @@ const Cursor: React.FC<IProps> = (props): JSX.Element => {
     const theme = { ...useTheme().Cursor };
     return (
         <CWrap sizeId={sizeId} theme={theme.cwrap} style={{
-            transform: `translate(${mouseCoords.x - 21}px, ${mouseCoords.y - 21}px)`,
+            transform: `matrix(1, 0, 0, 1, ${mouseCoords.x - 21}, ${mouseCoords.y - 21})`,
         }} />
     )
 }
