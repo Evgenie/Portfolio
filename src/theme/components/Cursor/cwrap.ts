@@ -9,6 +9,8 @@ export const blocks: TCSSObjProps = {
       minHeight: '42px',
       border: '1px solid #a4a4a4',
       borderRadius: '50%',
+      transitionProperty: 'scaleX, scaleY',
+      transitionDuration: '2s',
    },
    mobile: {},
    laptop: {},

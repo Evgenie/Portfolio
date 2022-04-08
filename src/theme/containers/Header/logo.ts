@@ -8,7 +8,7 @@ export const blocks: TCSSObjProps = {
       fontSize: '3vw',
       marginLeft: '4rem',
       marginRight: '1rem',
-      transition: 'all 1s ease',
+      transition: 'all 0.5s ease',
       zIndex: '5',
    },
    mobile: {},
