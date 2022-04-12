@@ -10,12 +10,16 @@ export type IProps = TElementProps;
 const Cursor: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'desktop', } = props;
     const mouseCoords = useContext(MouseContext);
-    const {isMouseOver} = useContext(MouseOver);
+    const { isMouseOver } = useContext(MouseOver);
+
     //@ts-ignore
     const theme = { ...useTheme().Cursor };
     return (
         <CWrap sizeId={sizeId} theme={theme.cwrap} style={{
-            transform: `matrix(${isMouseOver ? 1.33 : 1}, 0, 0, ${isMouseOver ? 1.33 : 1}, ${mouseCoords.x - 21}, ${mouseCoords.y - 21})`,
+            transform: `translate(${mouseCoords.x - 21}px, ${mouseCoords.y - 21}px)`,
+            width: `${isMouseOver ? '55.86px' : '42px'}`,
+            height: `${isMouseOver ? '55.86px' : '42px'}`,
+            display: mouseCoords.x || mouseCoords.y > 0 ? 'inline-block' : 'none',
         }} />
     )
 }
