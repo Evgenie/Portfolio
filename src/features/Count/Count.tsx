@@ -9,14 +9,16 @@ export type IProps = TElementProps;
 export const Count: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'mobile', langId = 'ru' } = props;
     const [counter, setCounter] = useState(0);
-    const counterIncrement = (num = counter) => setCounter(num === 100 ? num : ++num);
-
+    const counterIncrement = (num = counter, set = setCounter): unknown => {
+        set(num);
+        return num === 100
+            ? num
+            : setTimeout(() => counterIncrement(++num, set), 30);
+    }
     useEffect(() => {
-        const counterId = setInterval(counterIncrement, 30);
-        return () => {
-            clearInterval(counterId);
-        }
-    });
+        counterIncrement(counter, setCounter);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     //@ts-ignore
     const theme = { ...useTheme().Count };
     return (

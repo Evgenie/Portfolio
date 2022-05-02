@@ -25,9 +25,9 @@ export const App: React.FC<IProps> = (props): JSX.Element => {
   const theme = { ...useTheme().App };
   useEffect(() => {
     setTimeout(() => setShowLoader(false), 5000);
-  });
+  }, []);
   return (
-    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} onMouseMove={showLoader ? undefined : handleMoveMouse}>
+    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} onMouseMove={handleMoveMouse}>
       <MouseContext.Provider value={moveMouse}>
         <MouseOver.Provider value={{...mouseOver, handleMouseOver}}>
           {showLoader && <Loader sizeId={sizeId} />}
