@@ -1,8 +1,7 @@
 import { useTheme } from '@emotion/react';
-import React, { useContext } from 'react';
-import { MouseContext } from '../../context/MouseContext';
-import MouseOver from '../../context/MouseOver';
+import React, { useState } from 'react';
 import { TSize } from '../../definitions/TElementProps';
+import useMousePosition from '../../Hooks';
 import { BUTTON_MENU } from '../../theme/images';
 import Navbar from '../Navbar';
 import { Button, CWrap, Logo, Menu, Termin } from './Header.styles';
@@ -16,9 +15,9 @@ export interface IProps {
 
 export const Header: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'desktop', } = props;
-    const mouse = useContext(MouseContext);
-    const { isMouseOver, handleMouseOver } = useContext(MouseOver);
-    
+    const [x, y] = useMousePosition();
+    const [isMouseOver, setIsMouseOver] = useState(false);
+    const handleMouseOver = () => setIsMouseOver(!isMouseOver);
     //@ts-ignore
     const theme = { ...useTheme().Header };
     return (
@@ -27,7 +26,7 @@ export const Header: React.FC<IProps> = (props): JSX.Element => {
                 <Button sizeId={sizeId} theme={theme.button} src={BUTTON_MENU} alt='button' />
             </Menu>
             <Logo sizeId={sizeId} theme={theme.logo} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver} style={isMouseOver ? {
-                transform: `translate(${mouse.x - 250}px, ${mouse.y - 100}px)`,
+                transform: `translate(${x - 200}px, ${y-100}px)`,
             } : {}}>
                 Header
             </Logo>

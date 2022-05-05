@@ -7,36 +7,24 @@ import Header from '../../features/Header';
 import Footer from '../../features/Footer';
 import Loader from '../Loader';
 import Cursor from '../../features/Cursor';
-import MouseContext from '../../context/MouseContext';
-import MouseOver from '../../context/MouseOver';
 
 export type IProps = TElementProps;
 
 export const App: React.FC<IProps> = (props): JSX.Element => {
   const { sizeId = 'desktop', langId = 'ru', } = props;
   const [showLoader, setShowLoader] = useState(true);
-  const [moveMouse, setMoveMouse] = useState({ x: 0, y: 0 });
-  const [mouseOver, setMouseOver] = useState({ isMouseOver: false, });
-  const handleMouseOver = () => setMouseOver({
-    isMouseOver: !mouseOver.isMouseOver,
-  });
-  const handleMoveMouse = (e: React.MouseEvent) => setMoveMouse({ x: e.clientX, y: e.clientY });
   //@ts-ignore
   const theme = { ...useTheme().App };
   useEffect(() => {
     setTimeout(() => setShowLoader(false), 5000);
   }, []);
   return (
-    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} onMouseMove={handleMoveMouse}>
-      <MouseContext.Provider value={moveMouse}>
-        <MouseOver.Provider value={{...mouseOver, handleMouseOver}}>
-          {showLoader && <Loader sizeId={sizeId} />}
-          <Header sizeId={sizeId} />
-          <Main sizeId={sizeId} />
-          <Footer sizeId={sizeId} />
-          <Cursor sizeId={sizeId} />
-        </MouseOver.Provider>
-      </MouseContext.Provider>
+    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
+      {showLoader && <Loader sizeId={sizeId} />}
+      <Header sizeId={sizeId} />
+      <Main sizeId={sizeId} />
+      <Footer sizeId={sizeId} />
+      <Cursor sizeId={sizeId} />
     </CWrap>
   );
 };

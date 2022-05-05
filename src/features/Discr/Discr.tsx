@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react';
-import React, { useContext, useState } from 'react'
-import MouseOver from '../../context/MouseOver';
+import React, { useState } from 'react'
 import { TElementProps } from '../../definitions';
 import { CWrap, WWrap } from './Discr.styles';
 
@@ -10,7 +9,8 @@ export type IProps = TElementProps;
 export const Discr: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'mobile', } = props;
     const [sentence] = useState('WE DESIGN UNIQUE WEB / GRAPHIC EXPERIENCE'.split(' '));
-    const { isMouseOver, handleMouseOver } = useContext(MouseOver);
+    const [isMouseOver, setIsMouseOver] = useState(false);
+    const handleMouseOver = () => setIsMouseOver(!isMouseOver);
 
     //@ts-ignore
     const theme = { ...useTheme().Discr };
@@ -22,9 +22,9 @@ export const Discr: React.FC<IProps> = (props): JSX.Element => {
                     marginRight: '0',
                 } : {}}>
                     <WWrap sizeId={sizeId} theme={theme.wwrap} style={index === 3 || index === 5 ? {
-                        textDecoration: isMouseOver ? 'none' :'underline',
+                        textDecoration: isMouseOver ? 'none' : 'underline',
                         WebkitTextStrokeWidth: isMouseOver ? '1px' : '',
-                        WebkitTextStrokeColor: isMouseOver ?'white' : '',
+                        WebkitTextStrokeColor: isMouseOver ? 'white' : '',
                         color: isMouseOver ? 'transparent' : '',
                     } : {}}>
                         {word}
