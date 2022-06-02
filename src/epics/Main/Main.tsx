@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '@emotion/react';
-import { TSize } from '../../definitions/TElementProps';
+import { TSize } from '../../types/TElementProps';
 import { CWrap } from './Main.styles';
 import Discr from '../../features/Discr';
 

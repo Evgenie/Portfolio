@@ -1,6 +1,6 @@
 import { CSSObject } from "@emotion/react";
-import { TCSSObjProps } from "../definitions";
-import { TSize } from "../definitions/TElementProps";
+import { TCSSObjProps } from "../types";
+import { TSize } from "../types/TElementProps";
 
 type TElementProps = {
   theme: TCSSObjProps;

@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 import React, { useState } from 'react';
-import { TSize } from '../../definitions/TElementProps';
+import { TSize } from '../../types/TElementProps';
 import useMousePosition from '../../Hooks';
 import { BUTTON_MENU } from '../../theme/images';
 import Navbar from '../Navbar';

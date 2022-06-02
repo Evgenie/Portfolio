@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '@emotion/react';
-import TElementProps from '../../definitions/TElementProps';
+import TElementProps from '../../types/TElementProps';
 import { CWrap } from './App.styles';
 import Main from '../Main';
 import Header from '../../features/Header';
