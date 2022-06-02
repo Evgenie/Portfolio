@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 import React, { useEffect, useState } from 'react'
-import { TElementProps } from '../../definitions';
+import { TElementProps } from '../../types';
 import { CWrap } from './Count.styles';
 
 export type IProps = TElementProps;

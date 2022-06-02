@@ -1,5 +1,5 @@
 import { useLayoutEffect, useState } from "react";
-import { MouseCoords } from "../definitions";
+import { MouseCoords } from "../types";
 
 export const useMousePosition = (): number[] => {
     const [x, setX] = useState<number>(0);

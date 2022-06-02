@@ -1,4 +1,4 @@
-import { TCSSObjProps } from "../../../definitions";
+import { TCSSObjProps } from "../../../types";
 import { moveUp } from "./keyframes";
 
 export const blocks: TCSSObjProps = {

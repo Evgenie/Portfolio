@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 import React, { useState } from 'react'
-import { TElementProps } from '../../definitions';
+import { TElementProps } from '../../types';
 import useMousePosition from '../../Hooks';
 import { CWrap } from './Cursor.styles';
 

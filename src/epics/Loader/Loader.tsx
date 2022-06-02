@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTheme } from '@emotion/react';
-import { TElementProps } from '../../definitions';
+import { TElementProps } from '../../types';
 import Count from '../../features/Count';
 import { CWrap, Wait } from './Loader.styles';
 import Sentence from '../../features/Sentence';
