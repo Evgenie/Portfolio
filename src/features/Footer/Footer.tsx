@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 import React from 'react';
-import { TSize } from '../../definitions/TElementProps';
+import { TSize } from '../../types/TElementProps';
 import { CWrap, LinkNav, Logo, NavBar } from './Footer.styles';
 
 export interface IProps {

@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 import React from 'react'
-import { TElementProps } from '../../definitions'
+import { TElementProps } from '../../types'
 import { CWrap, LinkNav } from './Navbar.styles';
 
 export type IProps = TElementProps;

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { TElementProps } from "../../definitions";
+import { TElementProps } from "../../types";
 import { getCSSObj } from "../../utils";
 
 export type ICWrapProps = TElementProps;
@@ -22,7 +22,7 @@ ${getCSSObj}
 
 export type ICLogoProps = TElementProps;
 
-export const Logo = styled.h1<ICLogoProps>`
+export const Logo = styled.div<ICLogoProps>`
 ${getCSSObj}
 `;
 

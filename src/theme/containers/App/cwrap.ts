@@ -1,10 +1,9 @@
-import { TCSSObjProps } from "../../../definitions";
+import { TCSSObjProps } from "../../../types";
 
 export const blocks: TCSSObjProps = {
    core: {
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center', 
       width: '100vw',
       minHeight: '100vh',
       cursor: 'none',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '@emotion/react';
-import TElementProps from '../../definitions/TElementProps';
+import TElementProps from '../../types/TElementProps';
 import { CWrap } from './App.styles';
 import Main from '../Main';
 import Header from '../../features/Header';
@@ -12,27 +12,19 @@ export type IProps = TElementProps;
 
 export const App: React.FC<IProps> = (props): JSX.Element => {
   const { sizeId = 'desktop', langId = 'ru', } = props;
-  const [showLoader, setShowLoader] = useState(true)
-  const [moveMouse, setMoveMouse] = useState({ x: 0, y: 0 })
-
+  const [showLoader, setShowLoader] = useState(true);
   //@ts-ignore
   const theme = { ...useTheme().App };
-
   useEffect(() => {
     setTimeout(() => setShowLoader(false), 5000);
-  });
-
+  }, []);
   return (
-    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap} style={{
-      position: showLoader ? 'fixed' : 'relative',
-    }}
-      onMouseMove={showLoader ? undefined : (e) => setMoveMouse({ x: e.clientX, y: e.clientY })}
-    >
+    <CWrap sizeId={sizeId} langId={langId} theme={theme.cwrap}>
       {showLoader && <Loader sizeId={sizeId} />}
-      <Cursor sizeId={sizeId} mouseCoords={moveMouse} showLoader={showLoader} />
       <Header sizeId={sizeId} />
       <Main sizeId={sizeId} />
       <Footer sizeId={sizeId} />
+      <Cursor sizeId={sizeId} />
     </CWrap>
   );
 };

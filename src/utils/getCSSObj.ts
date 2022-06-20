@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
 import { CSSObject } from "@emotion/react";
-import { TSize } from "../definitions/TElementProps";
+import { TCSSObjProps } from "../types";
+import { TSize } from "../types/TElementProps";
 
 type TElementProps = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  theme: any;
+  theme: TCSSObjProps;
   sizeId: TSize;
 }
 

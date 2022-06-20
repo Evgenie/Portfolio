@@ -15,6 +15,7 @@ export const slideUp = keyframes({
     },
     '100%': {
         transform: 'translateY(-100%)',
+        display: 'none',
     },
 });
 

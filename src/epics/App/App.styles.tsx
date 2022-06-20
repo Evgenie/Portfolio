@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { getCSSObj } from '../../utils';
-import { TElementProps } from '../../definitions';
+import { TElementProps } from '../../types';
 
 export type ICWrapProps = TElementProps;
 
