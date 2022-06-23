@@ -1,25 +1,25 @@
-import { keyframes } from "@emotion/react";
+import { keyframes } from '@emotion/react';
 
 export const show = keyframes({
-    '0%, 100%': {
-        opacity: '0',
-    },
-    '25%, 75%': {
-        opacity: '1',
-    },
+	'0%, 100%': {
+		opacity: '0',
+	},
+	'25%, 75%': {
+		opacity: '1',
+	},
 });
 
 export const slideUp = keyframes({
-    '0%': {
-        transform: 'translateY(0)',
-    },
-    '100%': {
-        transform: 'translateY(-100%)',
-        display: 'none',
-    },
+	'0%': {
+		transform: 'translateY(0)',
+	},
+	'100%': {
+		transform: 'translateY(-100%)',
+		display: 'none',
+	},
 });
 
 export default {
-    show,
-    slideUp,
-}
+	show,
+	slideUp,
+};

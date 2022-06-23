@@ -1,14 +1,14 @@
-import cwrap from "./cwrap";
-import linknav from "./linknav";
+import cwrap from './cwrap';
+import linknav from './linknav';
 
 export interface ICTheme {
-    cwrap: typeof cwrap;
-    linknav: typeof linknav;
+	cwrap: typeof cwrap;
+	linknav: typeof linknav;
 }
 
 export const CTheme: ICTheme = {
-    cwrap,
-    linknav,
+	cwrap,
+	linknav,
 };
 
 export default CTheme;

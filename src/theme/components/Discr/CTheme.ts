@@ -1,14 +1,17 @@
-import cwrap from "./cwrap";
-import wwrap from "./wwrap";
+import cwrap from './cwrap';
+import hwwrap from './hwwrap';
+import wwrap from './wwrap';
 
 export type ICTheme = {
-    cwrap: typeof cwrap;
-    wwrap: typeof wwrap;
-}
+	cwrap: typeof cwrap;
+	wwrap: typeof wwrap;
+	hwwrap: typeof hwwrap;
+};
 
 export const CTheme: ICTheme = {
-    cwrap,
-    wwrap,
+	cwrap,
+	wwrap,
+	hwwrap,
 };
 
 export default CTheme;

@@ -1,1 +1,1 @@
-export { getCSSObj } from "./getCSSObj";
+export { getCSSObj } from './getCSSObj';

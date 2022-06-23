@@ -1,4 +1,4 @@
-import useMousePosition from "./useMousePosition";
+import useMousePosition from './useMousePosition';
 
 export { useMousePosition };
 

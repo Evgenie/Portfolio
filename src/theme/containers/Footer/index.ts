@@ -1,3 +1,3 @@
-import CTheme from "./CTheme";
+import CTheme from './CTheme';
 
 export default CTheme;

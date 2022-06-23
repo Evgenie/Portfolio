@@ -1,33 +1,33 @@
-import styled from "@emotion/styled";
-import { TElementProps } from "../../types";
-import { getCSSObj } from "../../utils";
+import styled from '@emotion/styled';
+import { TElementProps } from '../../types';
+import { getCSSObj } from '../../utils';
 
 export type ICWrapProps = TElementProps;
 
 export const CWrap = styled.div<ICWrapProps>`
-${getCSSObj}
+	${getCSSObj}
 `;
 
 export type ICMenuProps = TElementProps;
 
 export const Menu = styled.button<ICMenuProps>`
-${getCSSObj}
+	${getCSSObj}
 `;
 
 export type ICButtonProps = TElementProps;
 
 export const Button = styled.img<ICButtonProps>`
-${getCSSObj}
+	${getCSSObj}
 `;
 
 export type ICLogoProps = TElementProps;
 
 export const Logo = styled.div<ICLogoProps>`
-${getCSSObj}
+	${getCSSObj}
 `;
 
 export type ICTerminProps = TElementProps;
 
 export const Termin = styled.div<ICTerminProps>`
-${getCSSObj}
+	${getCSSObj}
 `;

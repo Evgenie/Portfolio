@@ -1,11 +1,11 @@
-import cwrap from "./cwrap";
+import cwrap from './cwrap';
 
 export type ICTheme = {
-    cwrap: typeof cwrap;
-}
+	cwrap: typeof cwrap;
+};
 
 export const CTheme: ICTheme = {
-    cwrap,
+	cwrap,
 };
 
 export default CTheme;

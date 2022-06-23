@@ -5,5 +5,5 @@ import { TElementProps } from '../../types';
 export type ICWrapProps = TElementProps;
 
 export const CWrap = styled.div<ICWrapProps>`
-  ${getCSSObj}
+	${getCSSObj}
 `;

@@ -1,4 +1,4 @@
-import Count from "./Count";
+import Count from './Count';
 
 export { Count };
 

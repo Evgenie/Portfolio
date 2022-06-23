@@ -1,9 +1,9 @@
-import components from "./components";
-import containers from "./containers";
+import components from './components';
+import containers from './containers';
 
 export const themes = {
-    ...components,
-    ...containers,
+	...components,
+	...containers,
 };
 
 export default themes;

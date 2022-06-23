@@ -1,4 +1,4 @@
-import Sentence from "./Sentence";
+import Sentence from './Sentence';
 
 export { Sentence };
 

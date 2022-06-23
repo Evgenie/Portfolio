@@ -7,11 +7,11 @@ import resets from './assets';
 import theme from './theme';
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <App sizeId={'desktop'} langId={'ru'} />
-    <Global styles={resets || css``} />
-  </ThemeProvider>,
-  document.getElementById('root')
+	<ThemeProvider theme={theme}>
+		<App sizeId={'desktop'} langId={'ru'} />
+		<Global styles={resets || css``} />
+	</ThemeProvider>,
+	document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,10 +1,10 @@
-import { CSSObject } from "@emotion/react";
-import { TSize } from "./TElementProps";
+import { CSSObject } from '@emotion/react';
+import { TSize } from './';
 
 export type TSectionName = 'core' | TSize;
 
 export type TCSSObjProps = {
-    [key in TSectionName]: CSSObject;
- };
+	[key in TSectionName]: CSSObject;
+};
 
- export default TCSSObjProps;
+export default TCSSObjProps;

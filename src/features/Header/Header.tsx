@@ -7,40 +7,52 @@ import Navbar from '../Navbar';
 import { Button, CWrap, Logo, Menu, Termin } from './Header.styles';
 
 export interface IProps {
-    sizeId?: TSize;
-    langId?: string;
-    customise?: unknown;
+	sizeId?: TSize;
+	langId?: string;
+	customise?: unknown;
 }
 
-
 export const Header: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'desktop', } = props;
-    const [x, y] = useMousePosition();
-    const [isMouseOver, setIsMouseOver] = useState(false);
-    const handleMouseOver = () => setIsMouseOver(!isMouseOver);
-    //@ts-ignore
-    const theme = { ...useTheme().Header };
-    return (
-        <CWrap sizeId={sizeId} theme={theme.cwrap}>
-            <Menu sizeId={sizeId} theme={theme.menu}>
-                <Button sizeId={sizeId} theme={theme.button} src={BUTTON_MENU} alt='button' />
-            </Menu>
-            <Logo sizeId={sizeId} theme={theme.logo} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver} style={isMouseOver ? {
-                transform: `translate(${x - 200}px, ${y-100}px)`,
-            } : {}}>
-                Header
-            </Logo>
-            <Termin sizeId={sizeId} theme={theme.termin}>
-                <p>
-                    Obys&mdash;<br />
-                    Creative <br />
-                    Design <br />
-                    Agency
-                </p>
-            </Termin>
-            <Navbar sizeId={sizeId} theme={theme.navbar} />
-        </CWrap>
-    );
+	const { sizeId = 'desktop' } = props;
+	const [x, y] = useMousePosition();
+	const [isMouseOver, setIsMouseOver] = useState(false);
+	const handleMouseOver = () => setIsMouseOver(!isMouseOver);
+	//@ts-ignore
+	const theme = { ...useTheme().Header };
+	return (
+		<CWrap sizeId={sizeId} theme={theme.cwrap}  >
+			<Menu sizeId={sizeId} theme={theme.menu}>
+				<Button
+					sizeId={sizeId}
+					theme={theme.button}
+					src={BUTTON_MENU}
+					alt="button"
+					onMouseEnter={handleMouseOver}
+					onMouseLeave={handleMouseOver}
+					style={
+						isMouseOver
+							? {
+									transform: `translate(${x - 200}px, ${y - 100}px)`,
+							  }
+							: {}
+					}
+				/>
+			</Menu>
+			<Logo sizeId={sizeId} theme={theme.logo}>
+				Header
+			</Logo>
+			<Termin sizeId={sizeId} theme={theme.termin}>
+				<p>
+					Obys&mdash;
+					<br />
+					Creative <br />
+					Design <br />
+					Agency
+				</p>
+			</Termin>
+			<Navbar sizeId={sizeId} />
+		</CWrap>
+	);
 };
 
 export default Header;

@@ -1,11 +1,11 @@
-import Count from "./Count";
-import Cursor from "./Cursor";
-import Discr from "./Discr";
-import Sentence from "./Sentence";
+import Count from './Count';
+import Cursor from './Cursor';
+import Discr from './Discr';
+import Sentence from './Sentence';
 
 export default {
-    Cursor,
-    Count,
-    Sentence,
-    Discr,
+	Cursor,
+	Count,
+	Sentence,
+	Discr,
 };

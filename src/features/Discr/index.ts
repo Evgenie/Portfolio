@@ -1,4 +1,4 @@
-import Discr from "./Discr";
+import Discr from './Discr';
 
 export { Discr };
 
