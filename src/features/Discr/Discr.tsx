@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react';
 import React, { useState } from 'react';
 import { TElementProps } from '../../types';
-import { CWrap, HWWrope, WWrap } from './Discr.styles';
+import { CWrap, WWrap } from './Discr.styles';
 
 export type IProps = TElementProps;
 
@@ -33,15 +33,12 @@ export const Discr: React.FC<IProps> = (props): JSX.Element => {
 							: {}
 					}
 				>
-					{index === 3 || index === 5 ? (
-						<HWWrope sizeId={sizeId} theme={theme.hwwrap}>
-							{word}
-						</HWWrope>
-					) : (
-						<WWrap sizeId={sizeId} theme={theme.wwrap}>
-							{word}
-						</WWrap>
-					)}
+					<WWrap
+						sizeId={sizeId}
+						theme={index === 3 || index === 5 ? theme.hwwrap : theme.wwrap}
+					>
+						{word}
+					</WWrap>
 				</CWrap>
 			))}
 		</>

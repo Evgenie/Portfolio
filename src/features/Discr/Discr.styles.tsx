@@ -14,12 +14,6 @@ export const WWrap = styled.div<IWWrapProps>`
 	${getCSSObj}
 `;
 
-export type IHWWropeProps = TElementProps;
-
-export const HWWrope = styled.div<IHWWropeProps>`
-	${getCSSObj}
-`;
-
 export type ILastProps = TElementProps;
 
 export const Last = styled.div<ILastProps>`
