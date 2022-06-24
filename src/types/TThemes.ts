@@ -1,5 +1,4 @@
 import '@emotion/react';
-import { TCSSObjProps } from '.';
 import theme from '../theme';
 
 export type TThemes = typeof theme;

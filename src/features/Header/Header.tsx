@@ -20,7 +20,7 @@ export const Header: React.FC<IProps> = (props): JSX.Element => {
 	//@ts-ignore
 	const theme = { ...useTheme().Header };
 	return (
-		<CWrap sizeId={sizeId} theme={theme.cwrap}  >
+		<CWrap sizeId={sizeId} theme={theme.cwrap}>
 			<Menu sizeId={sizeId} theme={theme.menu}>
 				<Button
 					sizeId={sizeId}
