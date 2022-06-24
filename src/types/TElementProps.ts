@@ -1,3 +1,4 @@
+import { Theme } from '@emotion/react';
 import TCSSObjProps from './TCSSObjProps';
 
 export type TSize = 'mobile' | 'laptop' | 'desktop';

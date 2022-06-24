@@ -4,10 +4,10 @@ export const blocks: TCSSObjProps = {
 	core: {
 		display: 'flex',
 		flexShrink: '0',
-		width: '100%',
+		width: '100vw',
 		alignItems: 'center',
 		justifyContent: 'center',
-		padding: '50px',
+		padding: '5vw',
 	},
 	mobile: {},
 	laptop: {},

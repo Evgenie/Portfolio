@@ -1,17 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './epics/App/';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, Global, css } from '@emotion/react';
 import resets from './assets';
 import theme from './theme';
 
-ReactDOM.render(
+const container = document.getElementById('root') as Element | DocumentFragment;
+const root = createRoot(container);
+
+root.render(
 	<ThemeProvider theme={theme}>
 		<App sizeId={'desktop'} langId={'ru'} />
 		<Global styles={resets || css``} />
-	</ThemeProvider>,
-	document.getElementById('root')
+	</ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
