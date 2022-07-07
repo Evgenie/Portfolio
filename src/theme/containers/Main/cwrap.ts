@@ -6,7 +6,7 @@ export const blocks: TCSSObjProps = {
 		flexWrap: 'wrap',
 		justifyContent: 'flex-start',
 		alignContent: 'center',
-		width: '100vw',
+		height: '100vh',
 		fontSize: '4vw',
 		flex: '1',
 		padding: '0 20vw',

@@ -4,7 +4,7 @@ export const blocks: TCSSObjProps = {
 	core: {
 		display: 'flex',
 		flexDirection: 'column',
-		width: '100vw',
+		maxWidth: '100vw',
 		minHeight: '100vh',
 		cursor: 'none',
 	},

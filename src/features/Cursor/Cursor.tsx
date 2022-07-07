@@ -21,7 +21,7 @@ const Cursor: React.FC<IProps> = (props): JSX.Element => {
 				transform: `translate(${x - 21}px, ${y - 21}px)`,
 				width: `${isMouseOver ? '55.86px' : '42px'}`,
 				height: `${isMouseOver ? '55.86px' : '42px'}`,
-				display: x || y > 0 ? 'inline-block' : 'none',
+				// display: x || y > 0 ? 'inline-block' : 'none',
 			}}
 		/>
 	);
