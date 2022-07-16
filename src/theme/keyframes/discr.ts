@@ -8,7 +8,3 @@ export const moveUp = keyframes({
 		transform: `translateY(0)`,
 	},
 });
-
-export default {
-	moveUp,
-};
